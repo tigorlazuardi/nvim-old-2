@@ -1,17 +1,10 @@
-local opts = { silent = true, noremap = true }
-
-local remap = vim.api.nvim_set_keymap
-
 vim.cmd([[let mapleader = " "]])
 
--- save all <c-s>
-remap('n', '<c-s>', ':wa<cr>', opts)
-remap('n', 'H', 'zc', opts)
-remap('n', 'L', 'zo', opts)
-remap('n', ']t', ':bn!<CR>', opts)
-remap('n', '[t', ':bp!<cr>', opts)
--- remap('n', 'Q', 'q', opts)
--- remap('n', 'q', '<nop>', opts)
+vim.keymap.set('n', '<c-x>', '<cmd>wa<cr>', { desc = 'Save All Open Buffers' })
+vim.keymap.set('n', 'H', 'zc', { desc = 'Fold Close' })
+vim.keymap.set('n', 'L', 'zo', { desc = 'Fold Open' })
+vim.keymap.set('n', ']t', '<cmd>bn!<cr>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '[t', '<cmd>bp!<cr>', { desc = 'Previous Buffer' })
 
 -- require('mappings.line_swap')
 require('mappings.gx')

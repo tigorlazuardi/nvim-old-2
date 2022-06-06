@@ -6,6 +6,9 @@
 - **snapshot:** fix logic for not creating new snapshot on full
 - **snapshot:** new snapshot will not be created if there's more than 10 already exist upon packer sync
 
+> Code Refactoring
+- modernize api calls
+
 > Features
 - **filetype:** env file is now considered sh
 - **gps:** added augroup
